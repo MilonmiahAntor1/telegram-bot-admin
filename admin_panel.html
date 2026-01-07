@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Admin Panel</h2>
+<button onclick="broadcast()">Send Broadcast</button>
+<script>
+function broadcast(){
+ fetch('/api/broadcast',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:'Hello'})})
+}
+</script>
+</body>
+</html>
