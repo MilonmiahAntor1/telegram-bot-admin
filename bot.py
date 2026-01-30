@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request
 import requests
 
@@ -9,7 +10,7 @@ from firebase_admin import credentials, firestore
 app = Flask(__name__)
 
 # ================== BOT CONFIG ==================
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")  # 🔥 Render Env থেকে নেবে
 ADMIN_ID = 6999345304   # আপনার Telegram ID
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/"
 # ===============================================
